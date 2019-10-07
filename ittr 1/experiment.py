@@ -1,7 +1,6 @@
-from psychopy import visual, event, monitors, core, gui, data
-import numpy as np
-import os, re, random, configparser, time
-from numpy import pi, sin, cos, mod
+from psychopy import visual, event, core
+import os, random, configparser
+from numpy import pi, sin, cos
 
 MAX_RAD = 1
 CENTER_X = 0
