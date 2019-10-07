@@ -223,7 +223,9 @@ def create_experiment():
     trial_split = generate_split(trials, go)
 
 
+    print(str(len(angles)) + " angles")
     print(angles)
+    print(str(len(distances)) + " distances")
     print(distances)
     print(trial_split)
 
@@ -295,7 +297,7 @@ def run_experiment():
 #main method for running all functions
 def main():
     create_experiment()
-    run_experiment()
+    #run_experiment()
 
 
 #what actually gets run when you run this file
