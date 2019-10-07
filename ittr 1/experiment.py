@@ -18,10 +18,8 @@ STIMULI_SIZE = .1
 STIMULUS_ORDER = []
 
 
-def generate_trials(num_ang, angles, num_dist, dist, trials, split):
+def generate_trials(angles, dist, split):
     global STIMULUS_ORDER
-
-    experiment_set = []
 
     #generating the unique set of stimuli
     unique_go_set = [[0,0,1]]
@@ -229,7 +227,7 @@ def create_experiment():
     print(distances)
     print(trial_split)
 
-    generate_trials(num_angles, angles, num_dist, distances, trials, trial_split)
+    generate_trials(angles, distances, trial_split)
 
 
 #creates the visual window: to be removed
