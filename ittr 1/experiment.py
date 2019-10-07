@@ -18,6 +18,7 @@ STIMULI_SIZE = .1
 STIMULUS_ORDER = []
 
 
+#master coordination method of generating the random list of trials
 def generate_trials(angles, dist, split):
     global STIMULUS_ORDER
 
