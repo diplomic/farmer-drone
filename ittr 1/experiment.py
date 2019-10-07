@@ -46,12 +46,14 @@ def generate_trials(num_ang, angles, num_dist, dist, trials, split):
     go_set = generate_sets(unique_go_set, go_even, go_extras)
     no_go_set = generate_sets(unique_no_go_set, no_go_even, no_go_extras)
 
+    #combining the go_set and no_go_set into one list
     ordered_set = []
     for i in go_set:
         ordered_set.append(i)
     for i in no_go_set:
         ordered_set.append(i)
 
+    #randomizing the set
     print(ordered_set)
     random.shuffle(ordered_set)
     print(ordered_set)
@@ -81,6 +83,7 @@ def generate_sets(unique_set, even, extras):
     return set
 
 
+#generates the number of go/nogo stimuli will be needed based on the percent given and number of trials
 def generate_split(trials, perc_go):
     if not trials > 0 or not perc_go > 0:
         return None
@@ -90,6 +93,7 @@ def generate_split(trials, perc_go):
     return [num_go, num_no_go]
 
 
+#generates even distances for stimuli based on the number of distances in the config
 def generate_dist(dist):
     if not dist > 0:
         return None
@@ -105,6 +109,7 @@ def generate_dist(dist):
     return measures
 
 
+#generates even angles in degrees based on number of angles given in config
 def generate_angles(angles):
     if not angles > 0:
         return None
@@ -119,6 +124,7 @@ def generate_angles(angles):
     return degrees
 
 
+#converts degrees and radii into square coordinates to be used on the screen
 def circle(degrees, radius):
     global CENTER_X
     global CENTER_Y
@@ -138,6 +144,7 @@ def circle(degrees, radius):
     return [x_crd / 2, y_crd / 2]
 
 
+#read in the config file
 def read_config():
     global PERCENT_GO
     global NO_OF_TRIALS
@@ -157,6 +164,8 @@ def read_config():
     config = configparser.ConfigParser()
     config.read("config.ini")
 
+
+    #assign config values to global variables
     PERCENT_GO = int(config['Config']['Percent Go'])
     NO_OF_TRIALS = int(config['Config']['Number of Trials'])
     PRESENTATION_TIME = int(config['Config']['Presentation Time'])
@@ -169,7 +178,7 @@ def read_config():
     TIMEOUT = config['Config']['Timeout or Action'] == 'Timeout'
 
 
-    #checking to make sure these are all good values that can be used i.e. non-zero, non-negative numbers
+    #bound check the variables received from the config
     if not PERCENT_GO > 0:
         print("Invalid value for Percent Go: " + str(PERCENT_GO))
         exit()
@@ -191,7 +200,7 @@ def read_config():
 
 
 
-
+#master method for coordinating the generation of the experiment based on config values
 def create_experiment():
     global PERCENT_GO
     global NO_OF_TRIALS
@@ -222,11 +231,13 @@ def create_experiment():
     generate_trials(num_angles, angles, num_dist, distances, trials, trial_split)
 
 
+#creates the visual window: to be removed
 def create_window():
     win = visual.Window(gammaErrorPolicy="ignore", units="height", fullscr=True, color=[0,0,0])
     return(win)
 
 
+#returns an array of initialized visual elements so they dont have to be initialized multiple times
 def create_stimuli(win):
     global STIMULI_SIZE
     size = STIMULI_SIZE
@@ -239,9 +250,14 @@ def create_stimuli(win):
 
 
 
+#controls the actual run of the experiment, displaying stimuli based on the stimuli array
 def run_trial(trial, stimuli, win):
     global TIMEOUT
+    global PRESENTATION_TIME
+    global MASK_TIME
+    mt = MASK_TIME
     to = TIMEOUT
+    pt = PRESENTATION_TIME
     mouse = event.Mouse(newPos=[0, 0], win=win)
     #stimuli[3].draw()
     if trial[2] is 1:
@@ -257,16 +273,14 @@ def run_trial(trial, stimuli, win):
         stimuli[1].draw(win=win)
         stimuli[2].draw(win=win)
     win.flip()
-    core.wait(secs=.9)
+    core.wait(secs=(pt/1000))
+    stimuli[4].draw(win=win)
+    win.flip()
+    core.wait(secs=(mt/1000))
     mouse.isPressedIn(stimuli[2], buttons=[0])
 
 
-
-
-    #show mask
-
-
-
+#master method for displaying visual elements: to be removed
 def run_experiment():
     global STIMULUS_ORDER
     global TIMEOUT
@@ -279,13 +293,19 @@ def run_experiment():
         run_trial(trial, stimuli, win)
 
 
-
+#main method for running all functions
 def main():
     create_experiment()
     run_experiment()
 
 
+#what actually gets run when you run this file
 main()
+
+
+
+
+#please ignore below, legacy code testing the drawing of visual elements
 
 
 # win = visual.Window(gammaErrorPolicy="ignore", units="height",monitor="Asus", fullscr=True)
