@@ -295,7 +295,7 @@ def run_experiment():
 #main method for running all functions
 def main():
     create_experiment()
-    #run_experiment()
+    run_experiment()
 
 
 #what actually gets run when you run this file
