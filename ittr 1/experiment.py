@@ -23,13 +23,12 @@ def generate_trials(angles, dist, split):
     global STIMULUS_ORDER
 
     #generating the unique set of stimuli
-    unique_go_set = [[0,0,1]]
-    unique_no_go_set = [[0,0,0]]
+    unique_go_set = []
+    unique_no_go_set = []
     for i in angles:
         for j in dist:
-            if j is not 0:
-                unique_go_set.append([i,j,1])
-                unique_no_go_set.append([i,j,0])
+            unique_go_set.append([i,j,1])
+            unique_no_go_set.append([i,j,0])
 
     #number of items in the unique set of stimuli
     unique_trials = len(unique_go_set)
