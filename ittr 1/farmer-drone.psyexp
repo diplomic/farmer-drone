@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="3.2.4">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="JS libs" updates="None" val="packaged" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1440, 900]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="farmer_ drone" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial">
+      <ImageComponent name="stimuli_picture">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="1.5" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$type" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="stimuli_picture" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(x_coord, y_coord)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="set every repeat" val="(size, size)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$duration" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <MouseComponent name="mouse">
+        <Param name="clickable" updates="constant" val="stimuli_picture" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="1.5" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
+        <Param name="name" updates="None" val="mouse" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="every frame" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="name, position" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$duration" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="routine" valType="str"/>
+      </MouseComponent>
+    </Routine>
+    <Routine name="intro">
+      <RatingScaleComponent name="rating">
+        <Param name="categoryChoices" updates="constant" val="Trackpad, Mouse, Trackball, Other" valType="str"/>
+        <Param name="customize_everything" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="disappear" updates="constant" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="high" updates="constant" val="7" valType="code"/>
+        <Param name="labels" updates="constant" val="" valType="str"/>
+        <Param name="low" updates="constant" val="1" valType="code"/>
+        <Param name="marker" updates="constant" val="triangle" valType="str"/>
+        <Param name="markerStart" updates="constant" val="" valType="str"/>
+        <Param name="name" updates="None" val="rating" valType="code"/>
+        <Param name="pos" updates="constant" val="0, -0.4" valType="str"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="scaleDescription" updates="constant" val="Choose input device" valType="str"/>
+        <Param name="showAccept" updates="constant" val="True" valType="bool"/>
+        <Param name="singleClick" updates="constant" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="1.0" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="tickHeight" updates="constant" val="" valType="str"/>
+        <Param name="visualAnalogScale" updates="constant" val="False" valType="bool"/>
+      </RatingScaleComponent>
+      <TextComponent name="select_input_prompt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="select_input_prompt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, .2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Please select the device you will be using to control the mouse" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <PolygonComponent name="polygon">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="polygon" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="shape" updates="constant" val="line" valType="str"/>
+        <Param name="size" updates="constant" val="(0.5, 0.5)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+    </Routine>
+    <Routine name="generate_trials">
+      <CodeComponent name="code">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="from psychopy import visual, event, core&amp;#10;import os, random, configparser&amp;#10;from numpy import pi, sin, cos&amp;#10;import xlsxwriter&amp;#10;&amp;#10;MAX_RAD = 1&amp;#10;CENTER_X = 0&amp;#10;CENTER_Y = 0&amp;#10;PERCENT_GO = 89&amp;#10;NO_OF_TRIALS = 330&amp;#10;PRESENTATION_TIME = 900&amp;#10;MASK_TIME = 225&amp;#10;NO_OF_ANGLES = 8&amp;#10;NO_OF_DIST = 3&amp;#10;OUTLINE = False&amp;#10;ASSIST = False&amp;#10;TIMEOUT = False&amp;#10;STIMULI_SIZE = .1&amp;#10;STIMULUS_ORDER = []&amp;#10;&amp;#10;&amp;#10;#master coordination method of generating the random list of trials&amp;#10;def generate_trials(angles, dist, split):&amp;#10;    global STIMULUS_ORDER&amp;#10;&amp;#10;    #generating the unique set of stimuli&amp;#10;    unique_go_set = []&amp;#10;    unique_no_go_set = []&amp;#10;    for i in angles:&amp;#10;        for j in dist:&amp;#10;            unique_go_set.append([i,j,1])&amp;#10;            unique_no_go_set.append([i,j,0])&amp;#10;&amp;#10;    #number of items in the unique set of stimuli&amp;#10;    unique_trials = len(unique_go_set)&amp;#10;&amp;#10;    # deciding how many times we can run each set of trials, and then the remaining&amp;#10;    # trials will be randomly decided&amp;#10;    go_even = split[0] // unique_trials&amp;#10;    go_extras = split[0] % unique_trials&amp;#10;    no_go_even = split[1] // unique_trials&amp;#10;    no_go_extras = split[1] % unique_trials&amp;#10;&amp;#10;    go_set = generate_sets(unique_go_set, go_even, go_extras)&amp;#10;    no_go_set = generate_sets(unique_no_go_set, no_go_even, no_go_extras)&amp;#10;&amp;#10;    #combining the go_set and no_go_set into one list&amp;#10;    ordered_set = []&amp;#10;    for i in go_set:&amp;#10;        ordered_set.append(i)&amp;#10;    for i in no_go_set:&amp;#10;        ordered_set.append(i)&amp;#10;&amp;#10;    #randomizing the set&amp;#10;    print(ordered_set)&amp;#10;    random.shuffle(ordered_set)&amp;#10;    print(ordered_set)&amp;#10;    STIMULUS_ORDER = ordered_set[:]&amp;#10;    return ordered_set&amp;#10;&amp;#10;&amp;#10;def generate_sets(unique_set, even, extras):&amp;#10;    # for the go trials&amp;#10;    # duplicate unique set go_sets number of times to ensure each stimuli is presented equally as many times as possible&amp;#10;    set = []&amp;#10;    i = 0&amp;#10;    while i &lt; even:&amp;#10;        for j in unique_set:&amp;#10;            set.append(j)&amp;#10;        i += 1&amp;#10;&amp;#10;    # for the go trials&amp;#10;    # randomly pulls the remainder of trials from possible locations, removing them once pulled so they cannot be used again&amp;#10;    i = 0&amp;#10;    temp_set = unique_set[:]&amp;#10;    while i &lt; extras:&amp;#10;        choice = random.choice(temp_set)&amp;#10;        set.append(choice)&amp;#10;        temp_set.remove(choice)&amp;#10;        i += 1&amp;#10;    return set&amp;#10;&amp;#10;&amp;#10;#generates the number of go/nogo stimuli will be needed based on the percent given and number of trials&amp;#10;def generate_split(trials, perc_go):&amp;#10;    if not trials &gt; 0 or not perc_go &gt; 0:&amp;#10;        return None&amp;#10;&amp;#10;    num_go = round(trials * (perc_go / 100))&amp;#10;    num_no_go = trials - num_go&amp;#10;    return [num_go, num_no_go]&amp;#10;&amp;#10;&amp;#10;#generates even distances for stimuli based on the number of distances in the config&amp;#10;def generate_dist(dist):&amp;#10;    if not dist &gt; 0:&amp;#10;        return None&amp;#10;    dist = dist + 1&amp;#10;    measures = []&amp;#10;    curr_meas = 0&amp;#10;    meas_width = float('%.3f'%(1 / dist))&amp;#10;    i = 0&amp;#10;    while i &lt; dist:&amp;#10;        measures.append(round(curr_meas, 6))&amp;#10;        curr_meas += meas_width&amp;#10;        i += 1&amp;#10;    return measures&amp;#10;&amp;#10;&amp;#10;#generates even angles in degrees based on number of angles given in config&amp;#10;def generate_angles(angles):&amp;#10;    if not angles &gt; 0:&amp;#10;        return None&amp;#10;    degrees = []&amp;#10;    curr_deg = 0&amp;#10;    deg_width = int(360 / angles)&amp;#10;    i = 0&amp;#10;    while i &lt; angles:&amp;#10;        degrees.append(curr_deg)&amp;#10;        curr_deg += deg_width&amp;#10;        i += 1&amp;#10;    return degrees&amp;#10;&amp;#10;&amp;#10;#converts degrees and radii into square coordinates to be used on the screen&amp;#10;def circle(degrees, radius):&amp;#10;    global CENTER_X&amp;#10;    global CENTER_Y&amp;#10;    global MAX_RAD&amp;#10;&amp;#10;    mid_x = CENTER_X&amp;#10;    mid_y = CENTER_Y&amp;#10;&amp;#10;    if not(radius &lt; MAX_RAD):&amp;#10;        return None&amp;#10;&amp;#10;    if radius == 0:&amp;#10;        #avoids weird math when doing calculations with zero&amp;#10;        return [0, 0]&amp;#10;&amp;#10;    radians = degrees * (pi / 180)&amp;#10;&amp;#10;    x_crd = mid_x + (radius * (cos(radians)))&amp;#10;    y_crd = mid_y + (radius * (sin(radians)))&amp;#10;&amp;#10;    return [round(x_crd / 2, 6), round(y_crd / 2, 6)]&amp;#10;&amp;#10;&amp;#10;#read in the config file&amp;#10;def read_config():&amp;#10;    global PERCENT_GO&amp;#10;    global NO_OF_TRIALS&amp;#10;    global PRESENTATION_TIME&amp;#10;    global MASK_TIME&amp;#10;    global NO_OF_ANGLES&amp;#10;    global NO_OF_DIST&amp;#10;    global OUTLINE&amp;#10;    global ASSIST&amp;#10;    global TIMEOUT&amp;#10;    global STIMULI_SIZE&amp;#10;&amp;#10;    if not os.path.exists('config.ini'):&amp;#10;        print(&quot;Warning: No config file exists, using program defaults&quot;)&amp;#10;        return None&amp;#10;&amp;#10;    config = configparser.ConfigParser()&amp;#10;    config.read(&quot;config.ini&quot;)&amp;#10;&amp;#10;&amp;#10;    #assign config values to global variables&amp;#10;    PERCENT_GO = int(config['Config']['Percent Go'])&amp;#10;    NO_OF_TRIALS = int(config['Config']['Number of Trials'])&amp;#10;    PRESENTATION_TIME = int(config['Config']['Presentation Time'])&amp;#10;    MASK_TIME = int(config['Config']['Mask Time'])&amp;#10;    NO_OF_ANGLES = int(config['Config']['Number of Angles'])&amp;#10;    NO_OF_DIST = int(config['Config']['Number of Distances'])&amp;#10;    STIMULI_SIZE = float(config['Config']['Size of Stimuli'])&amp;#10;    OUTLINE = config['Config']['Outline'] == 'True'&amp;#10;    ASSIST = config['Config']['Assist'] == 'True'&amp;#10;    TIMEOUT = config['Config']['Timeout or Action'] == 'Timeout'&amp;#10;&amp;#10;&amp;#10;    #bound check the variables received from the config&amp;#10;    if not PERCENT_GO &gt; 0:&amp;#10;        print(&quot;Invalid value for Percent Go: &quot; + str(PERCENT_GO))&amp;#10;        exit()&amp;#10;    elif not NO_OF_TRIALS &gt; 0:&amp;#10;        print(&quot;Invalid value for Number of Trials: &quot; + str(NO_OF_TRIALS))&amp;#10;        exit()&amp;#10;    elif not NO_OF_ANGLES &gt; 0:&amp;#10;        print(&quot;Invalid value for Number of Angles: &quot; + str(NO_OF_ANGLES))&amp;#10;        exit()&amp;#10;    elif not NO_OF_DIST &gt; 0:&amp;#10;        print(&quot;Invalid value for Number of Distances: &quot; + str(NO_OF_DIST))&amp;#10;        exit()&amp;#10;    elif not PRESENTATION_TIME &gt; 0:&amp;#10;        print(&quot;Invalid value for Presentation Time: &quot; + str(PRESENTATION_TIME))&amp;#10;        exit()&amp;#10;    elif not MASK_TIME &gt; 0:&amp;#10;        print(&quot;Invalid value for Mask Time: &quot; + str(MASK_TIME))&amp;#10;        exit()&amp;#10;&amp;#10;&amp;#10;&amp;#10;#master method for coordinating the generation of the experiment based on config values&amp;#10;def create_experiment():&amp;#10;    global PERCENT_GO&amp;#10;    global NO_OF_TRIALS&amp;#10;    global PRESENTATION_TIME&amp;#10;    global MASK_TIME&amp;#10;    global NO_OF_ANGLES&amp;#10;    global NO_OF_DIST&amp;#10;    global OUTLINE&amp;#10;    global ASSIST&amp;#10;    global STIMULUS_ORDER&amp;#10;&amp;#10;    read_config()&amp;#10;&amp;#10;    go = PERCENT_GO&amp;#10;    trials = NO_OF_TRIALS&amp;#10;    num_angles = NO_OF_ANGLES&amp;#10;    num_dist = NO_OF_DIST&amp;#10;&amp;#10;    angles = generate_angles(num_angles)&amp;#10;    distances = generate_dist(num_dist)&amp;#10;    trial_split = generate_split(trials, go)&amp;#10;&amp;#10;&amp;#10;    print(str(len(angles)) + &quot; angles&quot;)&amp;#10;    print(angles)&amp;#10;    print(str(len(distances)) + &quot; distances&quot;)&amp;#10;    print(distances)&amp;#10;    print(trial_split)&amp;#10;&amp;#10;    generate_trials(angles, distances, trial_split)&amp;#10;&amp;#10;&amp;#10;#creates the visual window: to be removed&amp;#10;def create_window():&amp;#10;    win = visual.Window(gammaErrorPolicy=&quot;ignore&quot;, units=&quot;height&quot;, fullscr=True, color=[0,0,0])&amp;#10;    return(win)&amp;#10;&amp;#10;&amp;#10;#returns an array of initialized visual elements so they dont have to be initialized multiple times&amp;#10;def create_stimuli(win):&amp;#10;    global STIMULI_SIZE&amp;#10;    size = STIMULI_SIZE&amp;#10;    gs = visual.ImageStim(win, image=&quot;images/go-stimuli.png&quot;, size=[size, size])&amp;#10;    ngs = visual.ImageStim(win, image=&quot;images/no-go-stimuli.png&quot;, size=[size, size])&amp;#10;    trg = visual.Polygon(win, edges=30, radius=size/2)&amp;#10;    bg = visual.ImageStim(win, image=&quot;images/background.jpg&quot;, size=[1, 1])&amp;#10;    mask = visual.ImageStim(win, image=&quot;images/mask.jpg&quot;, size=[1, 1])&amp;#10;    return [gs, ngs, trg, bg, mask]&amp;#10;&amp;#10;&amp;#10;&amp;#10;#controls the actual run of the experiment, displaying stimuli based on the stimuli array&amp;#10;def run_trial(trial, stimuli, win):&amp;#10;    global TIMEOUT&amp;#10;    global PRESENTATION_TIME&amp;#10;    global MASK_TIME&amp;#10;    mt = MASK_TIME&amp;#10;    to = TIMEOUT&amp;#10;    pt = PRESENTATION_TIME&amp;#10;    mouse = event.Mouse(newPos=[0, 0], win=win)&amp;#10;    #stimuli[3].draw()&amp;#10;    if trial[2] is 1:&amp;#10;        pos = circle(trial[0], trial[1])&amp;#10;        stimuli[0].setPos(pos)&amp;#10;        stimuli[2].setPos(pos)&amp;#10;        stimuli[0].draw(win=win)&amp;#10;        stimuli[2].draw(win=win)&amp;#10;    else:&amp;#10;        pos = circle(trial[0], trial[1])&amp;#10;        stimuli[1].setPos(pos)&amp;#10;        stimuli[2].setPos(pos)&amp;#10;        stimuli[1].draw(win=win)&amp;#10;        stimuli[2].draw(win=win)&amp;#10;    win.flip()&amp;#10;    core.wait(secs=(pt/1000))&amp;#10;    stimuli[4].draw(win=win)&amp;#10;    win.flip()&amp;#10;    core.wait(secs=(mt/1000))&amp;#10;    mouse.isPressedIn(stimuli[2], buttons=[0])&amp;#10;&amp;#10;&amp;#10;#master method for displaying visual elements: to be removed&amp;#10;def run_experiment():&amp;#10;    global STIMULUS_ORDER&amp;#10;    global TIMEOUT&amp;#10;&amp;#10;    experiment_set = STIMULUS_ORDER[:]&amp;#10;&amp;#10;    win = create_window()&amp;#10;    stimuli = create_stimuli(win)&amp;#10;    for trial in experiment_set:&amp;#10;        run_trial(trial, stimuli, win)&amp;#10;&amp;#10;def write_to_excel():&amp;#10;    workbook = xlsxwriter.Workbook('experiment.xlsx')&amp;#10;    worksheet = workbook.add_worksheet()&amp;#10;&amp;#10;    row = 1&amp;#10;    col = 0&amp;#10;&amp;#10;    worksheet.write(0, 0, &quot;x_coord&quot;)&amp;#10;    worksheet.write(0, 1, &quot;y_coord&quot;)&amp;#10;    worksheet.write(0, 2, &quot;angle&quot;)&amp;#10;    worksheet.write(0, 3, &quot;distance&quot;)&amp;#10;    worksheet.write(0, 4, &quot;type&quot;)&amp;#10;    worksheet.write(0, 5, &quot;size&quot;)&amp;#10;    worksheet.write(0, 6, &quot;duration&quot;)&amp;#10;    worksheet.write(0, 7, &quot;mask&quot;)&amp;#10;&amp;#10;    print(PRESENTATION_TIME)&amp;#10;    print(MASK_TIME)&amp;#10;&amp;#10;&amp;#10;    for angle, distance, type in (STIMULUS_ORDER):&amp;#10;        coords = circle(angle, distance)&amp;#10;        worksheet.write(row, col, coords[0])&amp;#10;        worksheet.write(row, col + 1, coords[1])&amp;#10;        worksheet.write(row, col + 2, angle)&amp;#10;        worksheet.write(row, col + 3, distance)&amp;#10;        if type == 0:&amp;#10;            worksheet.write(row, col + 4, &quot;images/no-go-stimuli.png&quot;)&amp;#10;        else:&amp;#10;            worksheet.write(row, col + 4, &quot;images/go-stimuli.png&quot;)&amp;#10;        worksheet.write(row, col + 5, STIMULI_SIZE)&amp;#10;        worksheet.write(row, col + 6, PRESENTATION_TIME/1000)&amp;#10;        worksheet.write(row, col + 7, MASK_TIME/1000)&amp;#10;        row += 1&amp;#10;&amp;#10;    workbook.close()&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;#main method for running all functions&amp;#10;def main():&amp;#10;    create_experiment()&amp;#10;    write_to_excel()&amp;#10;    #run_experiment()&amp;#10;&amp;#10;&amp;#10;#what actually gets run when you run this file&amp;#10;main()&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;#please ignore below, legacy code testing the drawing of visual elements&amp;#10;&amp;#10;&amp;#10;# win = visual.Window(gammaErrorPolicy=&quot;ignore&quot;, units=&quot;height&quot;,monitor=&quot;Asus&quot;, fullscr=True)&amp;#10;#&amp;#10;# img = visual.ImageStim(win, image=&quot;images/go-stimuli.png&quot;, size=[.1,.1])&amp;#10;# trg = visual.Polygon(win, edges=30, radius=.1, pos=circle(radius=0, degrees=0))&amp;#10;# trg2 = visual.Polygon(win, edges=30, radius=45, pos=[0,0])&amp;#10;#&amp;#10;#&amp;#10;# mouse = event.Mouse(newPos=[0,0], win=win)&amp;#10;#&amp;#10;#&amp;#10;# img.draw()&amp;#10;# trg.draw()&amp;#10;# win.flip()&amp;#10;# end = False&amp;#10;# while(not end):&amp;#10;#     if(mouse.isPressedIn(trg, buttons=[0]) or len(event.getKeys(keyList=['esc'])) is 1):&amp;#10;#         end = True&amp;#10;#&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="reset_mouse_pos">
+      <CodeComponent name="code_2">
+        <Param name="Begin Experiment" updates="constant" val="mouse = event.Mouse(newPos=[0, 0])" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="mouse = event.Mouse(newPos=[0, 0])" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_2" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="mask">
+      <NoiseStimComponent name="noise">
+        <Param name="blendmode" updates="constant" val="avg" valType="str"/>
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1.0" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val=".225" valType="code"/>
+        <Param name="filter" updates="constant" val="None" valType="str"/>
+        <Param name="imageComponent" updates="constant" val="Phase" valType="str"/>
+        <Param name="interpolate" updates="constant" val="nearest" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="noise" valType="code"/>
+        <Param name="noiseBW" updates="constant" val="1" valType="code"/>
+        <Param name="noiseBWO" updates="constant" val="30" valType="code"/>
+        <Param name="noiseBaseSf" updates="constant" val="8.0" valType="code"/>
+        <Param name="noiseClip" updates="constant" val="3.0" valType="code"/>
+        <Param name="noiseElementSize" updates="constant" val="0.0625" valType="code"/>
+        <Param name="noiseFilterLower" updates="constant" val="1.0" valType="code"/>
+        <Param name="noiseFilterOrder" updates="constant" val="0.0" valType="code"/>
+        <Param name="noiseFilterUpper" updates="constant" val="8.0" valType="code"/>
+        <Param name="noiseFractalPower" updates="constant" val="0.0" valType="code"/>
+        <Param name="noiseImage" updates="constant" val="None" valType="str"/>
+        <Param name="noiseNewSample" updates="constant" val="None" valType="str"/>
+        <Param name="noiseNewSampleWhen" updates="constant" val="1" valType="str"/>
+        <Param name="noiseOri" updates="constant" val="0.0" valType="code"/>
+        <Param name="noiseType" updates="constant" val="Binary" valType="str"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="phase" updates="constant" val="0.0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="sf" updates="constant" val="None" valType="code"/>
+        <Param name="size" updates="constant" val="2" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$mask" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="height" valType="str"/>
+      </NoiseStimComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="intro"/>
+    <Routine name="generate_trials"/>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('x_coord', 0.375), ('y_coord', 0.0), ('type', 'images/no-go-stimuli.png'), ('size', 0.07)]), OrderedDict([('x_coord', 0.0), ('y_coord', 0.25), ('type', 'images/go-stimuli.png'), ('size', 0.07)]), OrderedDict([('x_coord', 0.0), ('y_coord', 0.0), ('type', 'images/go-stimuli.png'), ('size', 0.07)]), OrderedDict([('x_coord', 0.0), ('y_coord', 0.375), ('type', 'images/go-stimuli.png'), ('size', 0.07)]), OrderedDict([('x_coord', 0.088388), ('y_coord', -0.088388), ('type', 'images/go-stimuli.png'), ('size', 0.07)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="experiment.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="reset_mouse_pos"/>
+    <Routine name="trial"/>
+    <Routine name="mask"/>
+    <LoopTerminator name="trials"/>
+  </Flow>
+</PsychoPy2experiment>

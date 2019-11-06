@@ -1,6 +1,7 @@
 from psychopy import visual, event, core
 import os, random, configparser
 from numpy import pi, sin, cos
+import xlsxwriter
 
 MAX_RAD = 1
 CENTER_X = 0
@@ -133,12 +134,16 @@ def circle(degrees, radius):
     if not(radius < MAX_RAD):
         return None
 
+    if radius == 0:
+        #avoids weird math when doing calculations with zero
+        return [0, 0]
+
     radians = degrees * (pi / 180)
 
     x_crd = mid_x + (radius * (cos(radians)))
     y_crd = mid_y + (radius * (sin(radians)))
 
-    return [x_crd / 2, y_crd / 2]
+    return [round(x_crd / 2, 6), round(y_crd / 2, 6)]
 
 
 #read in the config file
@@ -291,11 +296,52 @@ def run_experiment():
     for trial in experiment_set:
         run_trial(trial, stimuli, win)
 
+def write_to_excel():
+    workbook = xlsxwriter.Workbook('experiment.xlsx')
+    worksheet = workbook.add_worksheet()
+
+    row = 1
+    col = 0
+
+    worksheet.write(0, 0, "x_coord")
+    worksheet.write(0, 1, "y_coord")
+    worksheet.write(0, 2, "angle")
+    worksheet.write(0, 3, "distance")
+    worksheet.write(0, 4, "type")
+    worksheet.write(0, 5, "size")
+    worksheet.write(0, 6, "duration")
+    worksheet.write(0, 7, "mask")
+
+    print(PRESENTATION_TIME)
+    print(MASK_TIME)
+
+
+    for angle, distance, type in (STIMULUS_ORDER):
+        coords = circle(angle, distance)
+        worksheet.write(row, col, coords[0])
+        worksheet.write(row, col + 1, coords[1])
+        worksheet.write(row, col + 2, angle)
+        worksheet.write(row, col + 3, distance)
+        if type == 0:
+            worksheet.write(row, col + 4, "images/no-go-stimuli.png")
+        else:
+            worksheet.write(row, col + 4, "images/go-stimuli.png")
+        worksheet.write(row, col + 5, STIMULI_SIZE)
+        worksheet.write(row, col + 6, PRESENTATION_TIME/1000)
+        worksheet.write(row, col + 7, MASK_TIME/1000)
+        row += 1
+
+    workbook.close()
+
+
+
+
 
 #main method for running all functions
 def main():
     create_experiment()
-    run_experiment()
+    write_to_excel()
+    #run_experiment()
 
 
 #what actually gets run when you run this file
